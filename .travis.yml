@@ -6,4 +6,4 @@ before_install:
   - docker build -t yingsean/docker-tut -f Dockerfile.dev .
 
 script:
-  - docker run yingsean/docker-tut  npm run test -- --coverage
+  - docker run -e CI=true yingsean/docker-tut  npm run test -- --coverage
